@@ -1,0 +1,6 @@
+pandas
+pillow
+tensorflow
+streamlit
+numpy
+beautifulsoup4

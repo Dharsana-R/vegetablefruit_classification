@@ -55,7 +55,12 @@ def run():
     if img_file is not None:
         img = Image.open(img_file).resize((250, 250))
         st.image(img, use_column_width=False)
-        save_image_path = './upload_images/' + img_file.name
+              import os
+
+save_image_directory = './upload_images/'
+if not os.path.exists(save_image_directory):
+    os.makedirs(save_image_directory)
+
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
 

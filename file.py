@@ -35,7 +35,7 @@ def fetch_calories(prediction):
 
 
 def prepare_image(img_path):
-    img = load_img(img_path, target_size=(224, 224, 3))
+    img = load_img(img_path, target_size=(224, 224))
     img = img_to_array(img)
     img = img / 255
     img = np.expand_dims(img, [0])
